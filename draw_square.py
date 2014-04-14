@@ -18,6 +18,24 @@ def draw_tilted_squared(line_length):
         turtle.left(20)
         draw_tilted_squared(100)
 
+# draw_tilted_square(50)
+
+def draw_hexagon(line_length):
+    turtle.pendown()
+    for _ in range(6):
+        turtle.forward(line_length)
+        turtle.left(60)
+
+# Changing the pen color
+turtle.pencolor("blue")
+
+# Create 6 hexagons, moving to the bottom right corner to start a new one
+for i in range(6):
+    turtle.pensize(i+3)
+    draw_hexagon(100)
+    turtle.forward(100)
+    turtle.right(60)
+
 
 # Stop the Python Turtle window from disappearing until we click on the window with the mouse
 turtle.exitonclick()
