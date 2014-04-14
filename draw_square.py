@@ -14,12 +14,10 @@ def draw_square(line_length):
 # Uses the draw_square function but first changes the starting angle
 # Caling this function repeadedly will create a tilted square pattern 
 def draw_tilted_squared(line_length):
-    turtle.left(20)
-    draw_square(line_length)
+    for _ in range(3):
+        turtle.left(20)
+        draw_tilted_squared(100)
 
-# Call the draw_titled_square three times to get the desired pattern
-for _ in range(3):
-    draw_tilted_squared(100)
 
 # Stop the Python Turtle window from disappearing until we click on the window with the mouse
 turtle.exitonclick()
